@@ -2,10 +2,14 @@
 
 namespace App\Controllers;
 
+use Respect\Validation\Validator as validator;
+
 class IndexController extends BaseController
 {
     public function getIndexAction()
     {
+        $number = 123;
+        var_dump(validator::numericVal()->validate($number));
         return $this->renderHTML('index.twig');
     }
 }
