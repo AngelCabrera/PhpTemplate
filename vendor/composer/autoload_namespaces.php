@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'UpdateHelper\\' => array($vendorDir . '/kylekatarnls/update-helper/src'),
+    'Twig_' => array($vendorDir . '/twig/twig/lib'),
 );
