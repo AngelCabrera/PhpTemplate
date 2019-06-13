@@ -34,7 +34,42 @@ class __TwigTemplate_d36c188d17b9c39ffd24d2bec54299c7c688029d2436962106398f2e8fd
     {
         $macros = $this->macros;
         // line 1
-        echo "Estoy en Index.twig
+        echo "<!DOCTYPE html>
+<html lang=\"en\">
+    <head>
+        <meta charset=\"UTF-8\">
+        <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\">
+        <meta content=\"ie=edge\" http-equiv=\"X-UA-Compatible\">
+        <title>Php Template by ÁngelCabrera</title>
+    </head>
+    <body>
+        <h1>Vamos a comprobar la base de datos y las consultas</h1>
+        <form action=\"/curriculum/\" method=\"post\">
+            <label for=\"title\">Título:</label><br><br>
+            <input id=\"tile\" name=\"title\" placeholder=\"Ingresa el Título\" type=\"text\"><br><br>
+            <button type=\"submit\">Guardar</button>
+        </form>
+
+        <h2>Datos Guardados</h2>
+        <ul>
+            ";
+        // line 19
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["tools"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["tool"]) {
+            // line 20
+            echo "                <li>";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["tool"], "title", [], "any", false, false, false, 20), "html", null, true);
+            echo "</li>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['tool'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 22
+        echo "        </ul>
+    </body>
+</html></body></html>
 ";
     }
 
@@ -43,14 +78,42 @@ class __TwigTemplate_d36c188d17b9c39ffd24d2bec54299c7c688029d2436962106398f2e8fd
         return "index.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  37 => 1,);
+        return array (  70 => 22,  61 => 20,  57 => 19,  37 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("Estoy en Index.twig
+        return new Source("<!DOCTYPE html>
+<html lang=\"en\">
+    <head>
+        <meta charset=\"UTF-8\">
+        <meta content=\"width=device-width, initial-scale=1.0\" name=\"viewport\">
+        <meta content=\"ie=edge\" http-equiv=\"X-UA-Compatible\">
+        <title>Php Template by ÁngelCabrera</title>
+    </head>
+    <body>
+        <h1>Vamos a comprobar la base de datos y las consultas</h1>
+        <form action=\"/curriculum/\" method=\"post\">
+            <label for=\"title\">Título:</label><br><br>
+            <input id=\"tile\" name=\"title\" placeholder=\"Ingresa el Título\" type=\"text\"><br><br>
+            <button type=\"submit\">Guardar</button>
+        </form>
+
+        <h2>Datos Guardados</h2>
+        <ul>
+            {% for tool in tools %}
+                <li>{{ tool.title }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html></body></html>
 ", "index.twig", "C:\\xampp2\\htdocs\\curriculum\\resources\\views\\index.twig");
     }
 }
