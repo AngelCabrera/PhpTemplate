@@ -9,7 +9,7 @@ class IndexController extends BaseController
     public function getIndexAction()
     {
         $number = 123;
-        var_dump(validator::numericVal()->validate($number));
+        var_dump(validator::numeric()->validate($number));
         return $this->renderHTML('index.twig');
     }
 }
