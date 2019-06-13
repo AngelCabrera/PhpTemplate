@@ -44,7 +44,7 @@ class __TwigTemplate_d36c188d17b9c39ffd24d2bec54299c7c688029d2436962106398f2e8fd
     </head>
     <body>
         <h1>Vamos a comprobar la base de datos y las consultas</h1>
-        <form action=\"/curriculum/\" method=\"post\">
+        <form action=\"/curriculum\" method=\"post\">
             <label for=\"title\">Título:</label><br><br>
             <input id=\"tile\" name=\"title\" placeholder=\"Ingresa el Título\" type=\"text\"><br><br>
             <button type=\"submit\">Guardar</button>
@@ -100,7 +100,7 @@ class __TwigTemplate_d36c188d17b9c39ffd24d2bec54299c7c688029d2436962106398f2e8fd
     </head>
     <body>
         <h1>Vamos a comprobar la base de datos y las consultas</h1>
-        <form action=\"/curriculum/\" method=\"post\">
+        <form action=\"/curriculum\" method=\"post\">
             <label for=\"title\">Título:</label><br><br>
             <input id=\"tile\" name=\"title\" placeholder=\"Ingresa el Título\" type=\"text\"><br><br>
             <button type=\"submit\">Guardar</button>

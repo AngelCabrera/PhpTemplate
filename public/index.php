@@ -35,12 +35,12 @@ $request = Zend\Diactoros\ServerRequestFactory::fromGlobals(
 $routerContainer = new RouterContainer();
 $map = $routerContainer->getMap();
 
-$map->get('getIndex', '/curriculum/', [
+$map->get('getIndex', '/', [
     'controller' => 'App\Controllers\IndexController',
     'action' => 'getIndexAction'
 ]);
 
-$map->post('postIndex', '/curriculum/', [
+$map->post('postIndex', '/', [
     'controller' => 'App\Controllers\IndexController',
     'action' => 'postIndexAction'
 ]);
