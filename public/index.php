@@ -53,7 +53,7 @@ $matcher = $routerContainer->getMatcher();
 $route = $matcher->match($request);
 
 if (!$route) {
-    echo "Bad things baby";
+    echo "Esta ruta no existe";
 } else {
     $controllerName = $route->handler["controller"];
     $actionName = $route->handler["action"];

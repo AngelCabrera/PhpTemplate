@@ -5,20 +5,65 @@
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <meta content="ie=edge" http-equiv="X-UA-Compatible">
         <title>Php Template by ÁngelCabrera</title>
+        <link href="//fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css"/>
+        <style>
+            * {
+                margin: 0;
+            }
+            body {
+                font-family: Lato;
+
+            }
+            h1 {
+                text-align: center;
+                font-size: 3em;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            .header {
+                background-color: cyan;
+                display: flex;
+                height: 150px;
+                align-items: center;
+                justify-content: center;
+            }
+            .container {
+                margin: 20px auto;
+                width: 300px;
+            }
+            .container .form {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            form {
+                display: inline-flex;
+                margin: 10px;
+            }
+            form > input {
+                margin-left: 10px;
+            }
+        </style>
     </head>
     <body>
-        <h1>Vamos a comprobar la base de datos y las consultas</h1>
-        <form action="/" method="post">
-            <label for="title">Título:</label><br><br>
-            <input id="tile" name="title" placeholder="Ingresa el Título" type="text"><br><br>
-            <button type="submit">Guardar</button>
-        </form>
-
-        <h2>Datos Guardados</h2>
-        <ul>
-            {% for tool in tools %}
-                <li>{{ tool.title }}</li>
-            {% endfor %}
-        </ul>
+        <div class="header">
+            <h1>&#181; PHP TEMPLATE</h1>
+        </div>
+        <div class="container">
+            <div class="form">
+                <h2>Ingresa tu nombre:</h2>
+                <form action="/" method="post">
+                    <label for="title">Nombre:</label>
+                    <input id="tile" name="title" placeholder="Ingresa tu nombre" type="text">
+                    <button type="submit">Guardar</button>
+                </form>
+            </div>
+            <h2>Nombres Guardados</h2>
+            <ul>
+                {% for tool in tools %}
+                    <li>{{ tool.title }}</li>
+                {% endfor %}
+            </ul>
+        </div>
     </body>
-</html></body></html>
+</html>
