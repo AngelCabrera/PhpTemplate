@@ -9,10 +9,7 @@ class IndexController extends BaseController
 {
     public function getIndexAction()
     {
-        $tools = Tool::all();
-        return $this->renderHTML('index.twig', [
-            'tools' => $tools,
-        ]);
+        return $this->renderHTML('index.twig', []);
     }
     public function postIndexAction($request)
     {
